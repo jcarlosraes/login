@@ -1,0 +1,11 @@
+<p>Tipo de usuario: <%= session[:tipo] %></p>
+<%= 
+	case session[:tipo]
+	when 'A'
+		render partial: "layouts/menu_admin"
+	when 'S'
+		render partial: "layouts/menu_std"
+	else
+		No hay tipo de usuario
+	end
+%>
